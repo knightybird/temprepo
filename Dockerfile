@@ -8,7 +8,7 @@ ARG PORTFOLIO_VERSION_REF=v0.1.0
 RUN apk add --no-cache curl
 
 # Download the koel release matching the version and remove anything not necessary for production
-RUN curl -L https://github.com/knightybird/InventoryDB_laravel/releases/download/${PORTFOLIO_VERSION_REF}/koel-${PORTFOLIO_VERSION_REF}.tar.gz | tar -xz -C /tmp \
+RUN curl -L https://github.com/knightybird/InventoryDB_laravel/releases/download/${PORTFOLIO_VERSION_REF}/portfolio-${PORTFOLIO_VERSION_REF}.tar.gz | tar -xz -C /tmp \
   && rm -rf .editorconfig \
     .eslintignore \
     .eslintrc \

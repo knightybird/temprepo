@@ -34,7 +34,7 @@ file:
     group: www-data
     filetype: file
     contains:
-    - v5.1.8
+    - v5.0.2
   /var/www/html/artisan:
     exists: true
     mode: "0755"
@@ -148,22 +148,22 @@ group:
   www-data:
     exists: true
     gid: 33
-command:
-  artisan_env:
-    exec: php artisan env
-    exit-status: 0
-    stdout:
-    - 'Current application environment: production'
-    stderr: []
-    timeout: 0
+#command:
+#  artisan_env:
+#    exec: php artisan env
+#    exit-status: 0
+#    stdout:
+#    - 'Current application environment: production'
+#    stderr: []
+#    timeout: 0
 process:
   apache2:
     running: true
-http:
-  http://localhost:
-    status: 200
-    allow-insecure: false
-    no-follow-redirects: false
-    timeout: 5000
-    body:
-    - <title>Koel</title>
+#http:
+#  http://localhost:
+#    status: 200
+#    allow-insecure: false
+#    no-follow-redirects: false
+#    timeout: 5000
+#    body:
+#    - <title>Koel</title>

@@ -85,7 +85,7 @@ COPY ./php.ini "$PHP_INI_DIR/php.ini"
 RUN a2enmod rewrite
 
 # Copy the downloaded release
-COPY --from=release-downloader --chown=www-data:www-data /tmp/koel /var/www/html
+#COPY --from=release-downloader --chown=www-data:www-data /tmp/koel /var/www/html
 
 # Volumes for the music files and search index
 # This declaration must be AFTER creating the folders and setting their permissions

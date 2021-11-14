@@ -101,10 +101,10 @@ ENV FFMPEG_PATH=/usr/bin/ffmpeg \
     LANGUAGE=en_US:en \
     LC_ALL=en_US.UTF-8
 
-# Setup bootstrap script.
-COPY koel-entrypoint /usr/local/bin/
-ENTRYPOINT ["koel-entrypoint"]
-CMD ["apache2-foreground"]
+## Setup bootstrap script.
+#COPY koel-entrypoint /usr/local/bin/
+#ENTRYPOINT ["koel-entrypoint"]
+#CMD ["apache2-foreground"]
 
 EXPOSE 80
 

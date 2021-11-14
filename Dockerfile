@@ -2,14 +2,13 @@
 FROM alpine:3.14.2 as release-downloader
 
 # The koel version to download
-ARG KOEL_VERSION_REF=v5.1.8
+ARG PORTFOLIO_VERSION_REF=v0.1.0
 
 # Install curl to download the release tar.gz
 RUN apk add --no-cache curl
 
 # Download the koel release matching the version and remove anything not necessary for production
-RUN curl -L https://github.com/koel/koel/releases/download/${KOEL_VERSION_REF}/koel-${KOEL_VERSION_REF}.tar.gz | tar -xz -C /tmp \
-  && cd /tmp/koel/ \
+RUN curl -L https://github.com/knightybird/InventoryDB_laravel/releases/download/${PORTFOLIO_VERSION_REF}/koel-${PORTFOLIO_VERSION_REF}.tar.gz | tar -xz -C /tmp \
   && rm -rf .editorconfig \
     .eslintignore \
     .eslintrc \
